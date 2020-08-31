@@ -3,9 +3,9 @@ Pyladies Bratislava's Website
 
 ## How to run the backend and frontend: <br />
 
-1. Create virtual environment #python3 -m venv .venv <br />
-2. Activate virtual environment #.venv\Scripts\activate <br />
-3. Install the requirements #pip install -r requirements.txt <br />
+1. Create virtual environment $python3 -m venv .venv <br />
+2. Activate virtual environment $.venv\Scripts\activate <br />
+3. Install the requirements $pip install -r requirements.txt <br />
 4. Create file .env <br />
 5. To the .env file save this information: <br />
 FLASK_APP=api <br />
