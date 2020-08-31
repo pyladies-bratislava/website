@@ -1,4 +1,4 @@
-# website
+# Website
 Pyladies Bratislava's Website
 
 ## How to run the backend and frontend: <br />
@@ -19,13 +19,14 @@ FLASK_ENV=development <br />
 
 7. For frontend install node.js (https://nodejs.org/en/download/) <br />
 
-8. (.venv)......\website\forndend\npm install <br />
+8. (.venv)......\website\frontend\npm install <br />
 
 9. (.venv)......\website\frontend\npm start <br />
 
 ## How to create a file in windows terminal: <br />
 
-Type copy con testfile.txt, but replace testfile with the desired file name.
-Press Enter.
-Type your desired text. This is rudimentary text editor, but it's good for quick notes or code. You can use the Enter key as you type to move to the next line if you wish.
-Press Ctrl+Z when you're finished editing the file. This saves everything you've typed into the file.
+1. Type copy con testfile.txt, but replace testfile with the desired file name. Press Enter.  
+
+2. Type your desired text. This is rudimentary text editor, but it's good for quick notes or code. You can use the Enter key as you type to move to the next line if you wish.  
+
+3. Press Ctrl+Z when you're finished editing the file. This saves everything you've typed into the file.  
