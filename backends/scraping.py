@@ -11,26 +11,26 @@
 import requests
 from bs4 import BeautifulSoup   # for web scraping
 
-official_pyladies_url="https://pyladies.com/about/"
+pyladies_url="https://pyladies.com/about/"
 
-def get_official_pyladies_about_info(url=official_pyladies_url):
+def get_pyladies_about_info(url=pyladies_url):
     """ scrapes official pyladies website;
-    returns about_info str variable
+    returns pyladies_about_info str variable
     with info about pyladies;
     if the structure of the scraped website is changed,
     assigns url address as str instead """
 
-    page = requests.get(official_pyladies_url)
+    page = requests.get(pyladies_url)
     soup = BeautifulSoup(page.content, 'html.parser')
 
     # getting the desired text from scraped html page
     div_class_page = soup.find("div", {"class": "page"})
-    official_pyladies_about_info = div_class_page.find("p")
+    pyladies_about_info = div_class_page.find("p")
 
-    if official_pyladies_about_info:
-        official_pyladies_about_info = official_pyladies_about_info.text.strip()
+    if pyladies_about_info:
+        pyladies_about_info = pyladies_about_info.text.strip()
     # in case the website's structure is changed
     else:
-        official_pyladies_about_info=official_pyladies_url 
+        pyladies_about_info=pyladies_url 
 
-    return official_pyladies_about_info
+    return pyladies_about_info
