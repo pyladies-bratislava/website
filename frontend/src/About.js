@@ -11,7 +11,6 @@ function About() {
 
     return (
         <div>
-            <img src={logo} className="logo" />
             {about}
         </div>
   );
