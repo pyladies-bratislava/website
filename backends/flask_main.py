@@ -1,5 +1,6 @@
 from flask import Flask
 from .scraping import pyladies_url, get_pyladies_about_info
+from .events import SCOPES, get_google_cal_events
 
 
 app = Flask(__name__)
@@ -14,3 +15,9 @@ def get_menu():
 def get_about():
     pyladies_about_info = get_pyladies_about_info()
     return {"pyladies_about_info": "From international Pyladies website:"+ pyladies_about_info}
+
+
+@app.route("/events")
+def get_events():
+    events = get_google_cal_events()
+    return {"pyladies_events": events}
