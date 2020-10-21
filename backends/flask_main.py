@@ -20,4 +20,4 @@ def get_about():
 @app.route("/events")
 def get_events():
     events = get_google_cal_events()
-    return {"pyladies_events": events}
+    return {"events": events}

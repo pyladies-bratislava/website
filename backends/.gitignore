@@ -130,8 +130,4 @@ dmypy.json
 
 # credentials
 *client_secret.json
-*credentials.pickle
-*credentials_with_refresh_token.pickle
-*token*
-*credentials*
-*secret*
+*.pickle
