@@ -1,4 +1,3 @@
-from __future__ import print_function
 import datetime
 import pickle
 import os.path
@@ -68,7 +67,3 @@ def get_google_cal_events():
         print(start, event['summary'])
 
     return events
-
-
-if __name__ == '__main__':
-    get_google_cal_events()
