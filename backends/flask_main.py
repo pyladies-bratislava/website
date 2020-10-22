@@ -14,7 +14,7 @@ def get_menu():
 @app.route("/about")
 def get_about():
     pyladies_about_info = get_pyladies_about_info()
-    return {"pyladies_about_info": "From international Pyladies website:"+ pyladies_about_info}
+    return {"about": "From international Pyladies website:" + pyladies_about_info}
 
 
 @app.route("/events")
