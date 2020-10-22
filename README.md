@@ -5,7 +5,7 @@ By calling it a lab we want to give the freedom for everyone to experiment with 
 golden rule: `Is has to work` :)
 
 At the moment we have divided the frontend (visible part of the website for the user) from the backend(s) (invisible part).
-In the `frontend` folder we will probably have several ways of showing the website to a user on a browser, right now
+In the `frontend` folder we will probably have several ways of showing the website to a user in a browser, right now
 we have only a [simple react app](frontend/react.md).
 In the `backends` folder we have 2 json API backends: one done with [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 and another with [FastAPI](https://fastapi.tiangolo.com/). Both are Python frameworks.
