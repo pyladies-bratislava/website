@@ -1,12 +1,21 @@
 import React from 'react';
 import './menu2.css';
 import * as ReactBootStrap from "react-bootstrap";
+import logo from '../../frontend/src/pyladies-head.png'
 
 function Menu2() {
     return (
     <div className="Menu2">
         <ReactBootStrap.Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <ReactBootStrap.Navbar.Brand href="#home">PyLadies Bratislava</ReactBootStrap.Navbar.Brand>
+        <ReactBootStrap.Navbar.Brand href="#home">
+            <img
+                alt=""
+                src={logo}
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+                />{' '}
+                PyLadies Bratislava</ReactBootStrap.Navbar.Brand>
         <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
             <ReactBootStrap.Nav className="mr-auto">
