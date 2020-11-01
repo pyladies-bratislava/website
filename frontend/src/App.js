@@ -19,9 +19,9 @@ class Header extends Component {
     super(props);
     this.state = {
       links: [
-        {path: "/1", text: "Page 1", isActive: false},
-        {path: "/2", text: "Page 2", isActive: false},
-        {path: "/3", text: "Page 3", isActive: false},
+        {path: "/1", text: "About Us", isActive: false},
+        {path: "/2", text: "MeetuUps", isActive: false},
+        {path: "/3", text: "Stories", isActive: false},
       ]
     }
   }
@@ -48,7 +48,20 @@ class Header extends Component {
             className="d-inline-block align-top"
             />{' '}
             PyLadies Bratislava</Link>
-          <ul className="navbar-nav">
+
+          <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar-toggle"
+          aria-controls="nav-content"
+          aria-expanded="false"
+          >
+          <span className="navbar-toggler-icon" />
+        </button>
+
+          <div className="collapse navbar-collapse" id="navbar-toggle">  
+          <ul className="navbar-nav mr-auto">
             {this.state.links.map((link, i) => 
               <NavLink 
                 path={link.path} 
@@ -59,6 +72,7 @@ class Header extends Component {
               /> 
               )}
           </ul>
+          </div>  
         </nav>
       </div>
     );
