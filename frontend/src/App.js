@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom'; // import the react-router-dom components
-import { Home, Page1, Page2, Page3 } from './pages' // import our pages
+import Home from './Home' // import page Home
+import About from './About' // import page About
+import MeetUps from './MeetUps' // import page MeetUps
+import Contact from './Contact' // import page Contact
+import { Page3 } from './pages' // import our pages
 import logo from '../../frontend/src/assets/pyladies-head.png'
 
 const Main = () => (
   <main>
     <Switch>
       <Route exact path='/' component={Home} />
-      <Route exact path='/1' component={Page1}/>
-      <Route exact path='/2' component={Page2} />
+      <Route exact path='/About' component={About}/>
+      <Route exact path='/MeetUps' component={MeetUps} />
+      <Route exact path='/Contact' component={Contact} />
       <Route exact path='/3' component={Page3} />
     </Switch>
   </main>
@@ -20,9 +25,10 @@ class Header extends Component {
     super(props);
     this.state = {
       links: [
-        {path: "/1", text: "About Us", isActive: false},
-        {path: "/2", text: "MeetuUps", isActive: false},
+        {path: "/About", text: "About Us", isActive: false},
+        {path: "/MeetUps", text: "MeetUps", isActive: false},
         {path: "/3", text: "Stories", isActive: false},
+        {path: "/Contact", text: "Contact", isActive: false},
       ]
     }
   }
