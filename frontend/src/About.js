@@ -1,22 +1,19 @@
-import React, { Component } from "react";
+import React, {useState, useEffect} from 'react';
  
-class About extends Component {
-  render() {
+
+function About() {
+    const [about, setAbout] = useState("About");
+
+    useEffect(() => {
+        fetch("/About").then(response => response.json()).then(data => {setAbout(data.about)})
+    }, [])
+
     return (
-      <div>
-        <h2>STUFF</h2>
-        <p>Mauris sem velit, vehicula eget sodales vitae,
-        rhoncus eget sapien:</p>
-        <ol>
-          <li>Nulla pulvinar diam</li>
-          <li>Facilisis bibendum</li>
-          <li>Vestibulum vulputate</li>
-          <li>Eget erat</li>
-          <li>Id porttitor</li>
-        </ol>
-      </div>
-    );
-  }
+        <div>
+            {about}
+        </div>
+  );
 }
- 
+
 export default About;
+

@@ -1,13 +1,18 @@
-import React, { Component } from 'react';
+import React, {useState, useEffect} from 'react';
+import './menu.css'
 
-class MeetUps extends Component {
-    render() {
-        return(
-            <div>
-                <h1>MeetUps Page</h1>
-            </div>
-        );
-    }
+function Events() {
+    const [events, setEvents] = useState("Events");
+
+    useEffect(() => {
+        fetch("/events").then(response => response.json()).then(data => {setEvents(data.events)})
+    }, [])
+
+    return (
+        <div>
+            {events}
+        </div>
+  );
 }
 
-export default MeetUps;
+export default Events;
