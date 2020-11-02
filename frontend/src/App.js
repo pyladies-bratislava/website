@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route, Link } from 'react-router-dom'; // import the react-router-dom components
 import { Home, Page1, Page2, Page3 } from './pages' // import our pages
 import logo from '../../frontend/src/assets/pyladies-head.png'
+
 const Main = () => (
   <main>
     <Switch>
@@ -58,7 +59,7 @@ class Header extends Component {
           aria-expanded="false"
           >
           <span className="navbar-toggler-icon" />
-        </button>
+          </button>
 
           <div className="collapse navbar-collapse" id="navbar-toggle">  
           <ul className="navbar-nav mr-auto">
