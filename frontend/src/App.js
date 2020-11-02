@@ -36,7 +36,7 @@ class Header extends Component {
   handleClick(i) {
     const links = this.state.links.slice(); 
     for (const j in links) {
-      links[j].isActive = i == j ;
+      links[j].isActive = i === j ;
     }
     this.setState({links: links});
   }
