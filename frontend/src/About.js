@@ -16,7 +16,3 @@ function About() {
 }
 
 export default About;
-<<<<<<< HEAD
-
-=======
->>>>>>> e5ea8733742eac9d7e875510dc6f079a106f0abb
