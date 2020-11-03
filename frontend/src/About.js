@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import logo from './logo.png';
-import './menu.css'
+ 
 
 function About() {
     const [about, setAbout] = useState("About");

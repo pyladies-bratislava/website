@@ -1,0 +1,9 @@
+1. Activate virtual environment
+.\.venv\Scripts\activate
+
+2. run the frontend
+PS C:\Users\DELL\Documents\Progressbar\Pyladies-bratislava\website\frontend> npm start
+
+3. run the backend
+(.venv) PS C:\Users\DELL\Documents\Progressbar\Pyladies-bratislava\website\backends> flask run
+
