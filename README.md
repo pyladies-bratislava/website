@@ -20,9 +20,9 @@ We are managing Python versions and packages with `virtualenv` at the moment but
 
 Common stuff:
 
-1. Create a virtual environment called `.venv` in the `backends` folder:
+1. Create a virtual environment called `.venv` in the `backends` folder (if you have Python version 2. and 3., use command: `python3 -m venv .venv`):
 ~~~
-$ python3 -m venv .venv
+$ python -m venv .venv
 ~~~
 2. Activate virtual environment. (Activated virtual environment will be indicated by (.venv) in the beginning of the terminal line.)
  - on Windows:
