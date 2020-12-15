@@ -5,7 +5,7 @@ import About from './About' // import page About
 import MeetUps from './MeetUps' // import page MeetUps
 import Contact from './Contact' // import page Contact
 import { Page3 } from './pages' // import our pages
-import logo from '../../frontend/src/assets/pyladies-head.png'
+import logo from './assets/pyladies-head.png'
 
 const Main = () => (
   <main>
