@@ -36,6 +36,4 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://bratislava-flask-backend.herokuapp.com/",
-  "secure": true
 }
