@@ -46,6 +46,10 @@ class Contact extends Component {
                     </div>
                 </div>
             </div>
+            <div class="container text-center pt-5 pb-5">
+                <h3 class="text-decorated">We are here to help you start learnig coding. Send us an email at</h3>
+                <h2 class="text-decorated font-weight-bold">bratislava@pyladies.com</h2>
+            </div>
         </React.Fragment>    
         );
     }

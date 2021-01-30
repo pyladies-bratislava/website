@@ -5,6 +5,7 @@ import About from './About' // import page About
 import MeetUps from './MeetUps' // import page MeetUps
 import Contact from './Contact' // import page Contact
 import { Page3 } from './pages' // import our pages
+import Footer from './Footer' // import page Footer
 import logo from './assets/pyladies-head.png'
 
 const Main = () => (
@@ -90,6 +91,7 @@ const App = () => (
   <div>
     <Header />
     <Main />
+    <Footer />
   </div>
 )
 
@@ -110,4 +112,3 @@ class NavLink extends Component {
       );
   }
 };
-
