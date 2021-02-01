@@ -19,7 +19,7 @@ By default Flask runs on port 8000 and FastAPI on 5000.
 
 1. Install [node.js](https://nodejs.org/en/download/).
 
-2. In website directory create a new file called .env with this inside:
+2. In the website directory create a new file called .env with:
 REACT_APP_BACKEND_URL=https://bratislava-flask-backend.herokuapp.com/
 
 3. Then in the `website` folder run:
