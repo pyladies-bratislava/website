@@ -1,0 +1,10 @@
+/* bootstrap.css */
+html {
+    font-size: 14px;
+    line-height: 1.428;
+ }
+
+ .text-decorated {
+    font-family: 'Dancing Script', cursive;
+}
+
