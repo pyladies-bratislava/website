@@ -3,6 +3,7 @@ import { Switch, Route, Link } from 'react-router-dom'; // import the react-rout
 import Home from './Home' // import page Home
 import About from './About' // import page About
 import MeetUps from './MeetUps' // import page MeetUps
+import Events from './Events' // import page Events
 import Contact from './Contact' // import page Contact
 import { Page3 } from './pages' // import our pages
 import logo from './assets/pyladies-head.png'
@@ -13,6 +14,7 @@ const Main = () => (
       <Route exact path='/' component={Home} />
       <Route exact path='/About' component={About}/>
       <Route exact path='/MeetUps' component={MeetUps} />
+      <Route exact path='/Events' component={Events} />
       <Route exact path='/Contact' component={Contact} />
       <Route exact path='/3' component={Page3} />
     </Switch>
@@ -27,6 +29,7 @@ class Header extends Component {
       links: [
         {path: "/About", text: "About Us", isActive: false},
         {path: "/MeetUps", text: "MeetUps", isActive: false},
+        {path: "/Events", text: "Events", isActive: false},
         {path: "/3", text: "Stories", isActive: false},
         {path: "/Contact", text: "Contact", isActive: false},
       ]
