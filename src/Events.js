@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-
+import './menu.css'
 
 function Events() {
     const [events, setEvents] = useState("Events");

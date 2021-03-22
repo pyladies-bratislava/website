@@ -7,7 +7,7 @@ import Events from './Events' // import page Events
 import Contact from './Contact' // import page Contact
 import { Page3 } from './pages' // import our pages
 import Footer from './Footer' // import page Footer
-import logo from './assets/pyladies-head.png'
+import logo from './assets/pyladies-head_black.png'
 
 const Main = () => (
   <main>
