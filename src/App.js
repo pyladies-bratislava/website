@@ -10,7 +10,7 @@ import Footer from './Footer' // import page Footer
 import logo from './assets/pyladies-head_black.png'
 
 const Main = () => (
-  <main>
+  <main class="container mt-5 min-vh-100">
     <Switch>
       <Route exact path='/' component={Home} />
       <Route exact path='/About' component={About}/>
@@ -92,7 +92,7 @@ class Header extends Component {
 
 const App = () => (
   <div>
-    <div className='d-flex flex-column min-vh-100'>
+    <div className='d-flex flex-column'>
       <Header />
       <Main />
     </div>
