@@ -92,8 +92,10 @@ class Header extends Component {
 
 const App = () => (
   <div>
-    <Header />
-    <Main />
+    <div className='d-flex flex-column min-vh-100'>
+      <Header />
+      <Main />
+    </div>
     <Footer />
   </div>
 )
