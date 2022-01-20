@@ -91,13 +91,11 @@ class Header extends Component {
 };
 
 const App = () => (
-  <div>
-    <div className='d-flex flex-column'>
-      <Header />
-      <Main />
-    </div>
+  <>
+    <Header />
+    <Main />
     <Footer />
-  </div>
+  </>
 )
 
 export default App;
