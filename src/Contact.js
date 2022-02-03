@@ -18,7 +18,7 @@ class Contact extends Component {
         </div>
         <div className="container">
           <h1 className="text-center">
-            We'd <i className="far fa-heart" /> to help.
+            We&apos;d <i className="far fa-heart" /> to help.
           </h1>
           <h4 className="text-center">
             We like to create things with fun, open minded people. <br /> Feel

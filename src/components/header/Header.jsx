@@ -1,30 +1,9 @@
-import React, { Component } from "react";
-import { Switch, Route, Link } from "react-router-dom"; // import the react-router-dom components
-import Home from "./Home"; // import page Home
-import About from "./About"; // import page About
-import MeetUps from "./MeetUps"; // import page MeetUps
-import Events from "./Events"; // import page Events
-import Contact from "./Contact"; // import page Contact
-import { Page3 } from "./pages"; // import our pages
-import Footer from "./Footer"; // import page Footer
-import logo from "./assets/pyladies-head_black.png";
+import { Component } from "react";
+import { Link } from "react-router-dom";
+import { NavLink } from "../nav-link/NavLink";
+import logo from "../../assets/pyladies-head_black.png";
 
-function Main() {
-  return (
-    <main className="container mt-5 min-vh-100">
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/About" component={About} />
-        <Route exact path="/MeetUps" component={MeetUps} />
-        <Route exact path="/Events" component={Events} />
-        <Route exact path="/Contact" component={Contact} />
-        <Route exact path="/3" component={Page3} />
-      </Switch>
-    </main>
-  );
-}
-
-class Header extends Component {
+export class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,11 +18,11 @@ class Header extends Component {
   }
 
   handleClick(i) {
-    const links = this.state.links.slice();
+    const links = this.state;
     for (const j in links) {
       links[j].isActive = i === j;
     }
-    this.setState({ links });
+    this.setState({ ...links });
   }
 
   render() {
@@ -87,34 +66,6 @@ class Header extends Component {
           </div>
         </nav>
       </div>
-    );
-  }
-}
-
-function App() {
-  return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
-  );
-}
-
-export default App;
-
-class NavLink extends Component {
-  render() {
-    return (
-      <li className={`nav-item ${this.props.isActive ? "active" : ""}`}>
-        <Link
-          className="nav-link"
-          to={this.props.path}
-          onClick={() => this.props.onClick()}
-        >
-          {this.props.text}
-        </Link>
-      </li>
     );
   }
 }

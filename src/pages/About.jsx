@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { API_BASE_URL } from "../constants";
 
-function About() {
+export const About = () => {
   const [about, setAbout] = useState([]);
   const [fetching, setFetching] = useState(false);
   const [error, setError] = useState("");
-  const api_base_url = process.env.REACT_APP_BACKEND_URL;
-
-  useEffect(() => {
-    fetchAboutData();
-  }, []);
 
   const fetchAboutData = async () => {
     setFetching(true);
     try {
-      const response = await fetch(`${api_base_url}about`);
+      const response = await fetch(`${API_BASE_URL}about`);
       const data = await response.json();
       setAbout(data.about);
       setFetching(false);
@@ -22,6 +18,10 @@ function About() {
       setError(e);
     }
   };
+
+  useEffect(() => {
+    fetchAboutData();
+  }, []);
 
   return (
     <div>
@@ -39,6 +39,6 @@ function About() {
       )}
     </div>
   );
-}
+};
 
 export default About;

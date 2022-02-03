@@ -1,25 +1,21 @@
 import React, { useState, useEffect } from "react";
+import { API_BASE_URL } from "./constants";
 import "./menu.css";
 
 function Events() {
-  const [events, setEvents] = useState([]);
+  const [listOfEvents, setListOfEvents] = useState([]);
   const [fetching, setFetching] = useState(false);
   const [error, setError] = useState("");
-  const api_base_url = process.env.REACT_APP_BACKEND_URL;
-
-  useEffect(() => {
-    fetchAboutData();
-  }, []);
 
   const fetchAboutData = async () => {
     setFetching(true);
     try {
-      const response = await fetch(`${api_base_url}events`);
+      const response = await fetch(`${API_BASE_URL}events`);
       const { events } = await response.json();
       if (events.length === 0) {
-        setEvents("No events found");
+        setListOfEvents("No events found");
       } else {
-        setEvents(events);
+        setListOfEvents(events);
       }
       setFetching(false);
     } catch (e) {
@@ -28,6 +24,10 @@ function Events() {
     }
   };
 
+  useEffect(() => {
+    fetchAboutData();
+  }, []);
+
   return (
     <div>
       {fetching ? (
@@ -35,7 +35,7 @@ function Events() {
           <span className="visually-hidden">Loading...</span>
         </div>
       ) : (
-        events
+        listOfEvents
       )}
       {error && (
         <div className="alert alert-danger" role="alert">
