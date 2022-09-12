@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./Contact.css";
 import ButtonMailto from "./MailTo";
 
 class Contact extends Component {

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { API_BASE_URL } from "./constants";
-import "./menu.css";
+import { API_BASE_URL } from "../constants";
+import "../menu.css";
 
-function Events() {
+export const Events = () => {
   const [listOfEvents, setListOfEvents] = useState([]);
   const [fetching, setFetching] = useState(false);
   const [error, setError] = useState("");
 
-  const fetchAboutData = async () => {
+  const fetchEventsData = async () => {
     setFetching(true);
     try {
       const response = await fetch(`${API_BASE_URL}events`);
@@ -25,7 +25,7 @@ function Events() {
   };
 
   useEffect(() => {
-    fetchAboutData();
+    fetchEventsData();
   }, []);
 
   return (
@@ -35,7 +35,7 @@ function Events() {
           <span className="visually-hidden">Loading...</span>
         </div>
       ) : (
-        listOfEvents
+        listOfEvents // temporary
       )}
       {error && (
         <div className="alert alert-danger" role="alert">
@@ -44,6 +44,6 @@ function Events() {
       )}
     </div>
   );
-}
+};
 
 export default Events;
