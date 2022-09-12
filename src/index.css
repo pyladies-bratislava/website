@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html {
+  font-size: 16px;
+  line-height: 1.428;
+}
+
+.text-decorated {
+  font-family: 'Dancing Script', cursive;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+}

@@ -1,11 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const labelWithIcon = (
-  <i className="fas fa-at fa-4x text-dark" aria-hidden="true" />
-);
-
-function ButtonMailto({ mailto }) {
+export const ButtonMailTo = ({ mailto }) => {
   return (
     <Link
       to="#"
@@ -14,9 +10,7 @@ function ButtonMailto({ mailto }) {
         e.preventDefault();
       }}
     >
-      {labelWithIcon}
+      <i className="fas fa-at fa-4x text-dark" aria-hidden="true" />
     </Link>
   );
-}
-
-export default ButtonMailto;
+};

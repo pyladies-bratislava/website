@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
-import "../menu.css";
 
 export const MeetUps = () => {
   const [events, setEvents] = useState([]);

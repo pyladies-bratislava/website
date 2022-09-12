@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { API_BASE_URL } from "../constants";
-import "../menu.css";
 
 export const Events = () => {
   const [listOfEvents, setListOfEvents] = useState([]);
