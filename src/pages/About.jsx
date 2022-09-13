@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Container, Spinner } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import { Loader } from "../components/loader/Loader";
 import { API_BASE_URL } from "../constants";
 
 export const About = () => {
@@ -27,16 +28,7 @@ export const About = () => {
   return (
     <Container>
       {fetching ? (
-        <Container className="overlay d-flex justify-content-center align-items-center min-vh-100">
-          <Spinner
-            role="status"
-            animation="border"
-            variant="info"
-            style={{ width: "4rem", height: "4rem" }}
-          >
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
-        </Container>
+        <Loader />
       ) : (
         about.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
       )}
