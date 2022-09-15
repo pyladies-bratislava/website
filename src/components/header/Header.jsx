@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import { MENU_LINKS } from "./Header.constants";
 import { NavLink } from "../nav-link/NavLink";
-import logo from "../../assets/pyladies-head_black.png";
+import { Logo } from "../logo";
 
 export const Header = () => {
   const handleClick = (_, index) => {
@@ -12,17 +11,7 @@ export const Header = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark  bg-dark">
-        <Link className="navbar-brand" to="/">
-          <img
-            alt=""
-            src={logo}
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-          />{" "}
-          PyLadies Bratislava
-        </Link>
-
+        <Logo />
         <button
           className="navbar-toggler"
           type="button"

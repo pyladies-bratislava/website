@@ -9,10 +9,10 @@ export const Home = () => {
         Pyladies Bratislava&apos;s Website vision is to become a lab for
         experimenting, not only using Python but also other languages and
         frameworks. By calling it a lab we want to give the freedom for everyone
-        to experiment with anything - the one and only rule is{" "}
+        to experiment with anything. The one and only rule is{" "}
         <Badge pill bg="success" text="light">
           {" "}
-          It has to work{" "}
+          it has to work{" "}
         </Badge>
       </Card.Body>
     </Card>
