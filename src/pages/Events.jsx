@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Container, Alert } from "react-bootstrap";
+
 import { API_BASE_URL } from "../constants";
+import { Loader } from "../components/loader/Loader";
 
 export const Events = () => {
   const [listOfEvents, setListOfEvents] = useState([]);
@@ -28,20 +31,14 @@ export const Events = () => {
   }, []);
 
   return (
-    <div>
+    <Container>
       {fetching ? (
-        <div className="spinner-border text-info" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
+        <Loader />
       ) : (
         listOfEvents // temporary
       )}
-      {error && (
-        <div className="alert alert-danger" role="alert">
-          {error.message}
-        </div>
-      )}
-    </div>
+      {error && <Alert variant="danger">{error.message}</Alert>}
+    </Container>
   );
 };
 

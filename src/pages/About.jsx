@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Alert } from "react-bootstrap";
+
 import { Loader } from "../components/loader/Loader";
 import { API_BASE_URL } from "../constants";
 
@@ -32,11 +33,7 @@ export const About = () => {
       ) : (
         about.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
       )}
-      {error && (
-        <div className="alert alert-danger" role="alert">
-          {error.message}
-        </div>
-      )}
+      {error && <Alert variant="danger">{error.message}</Alert>}
     </Container>
   );
 };
