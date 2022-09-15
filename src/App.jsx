@@ -2,7 +2,7 @@ import React from "react";
 
 import { Switch, Route } from "react-router-dom";
 
-import { About, MeetUps, Home, Events, Contact } from "./pages/index";
+import { About, MeetUps, Home, Events, Contact, Stories } from "./pages/index";
 import { PageLayout } from "./components/page-layout";
 
 export const App = () => {
@@ -14,6 +14,7 @@ export const App = () => {
         <Route path="/MeetUps" component={MeetUps} />
         <Route path="/Events" component={Events} />
         <Route path="/Contact" component={Contact} />
+        <Route path="/Stories" component={Stories} />
       </Switch>
     </PageLayout>
   );
