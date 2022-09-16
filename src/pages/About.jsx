@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Container, Alert } from "react-bootstrap";
+
+import { Loader } from "../components/loader/Loader";
 import { API_BASE_URL } from "../constants";
 
 export const About = () => {
@@ -24,20 +27,14 @@ export const About = () => {
   }, []);
 
   return (
-    <div>
+    <Container>
       {fetching ? (
-        <div className="spinner-border text-info" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
+        <Loader />
       ) : (
-        about
+        about.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
       )}
-      {error && (
-        <div className="alert alert-danger" role="alert">
-          {error.message}
-        </div>
-      )}
-    </div>
+      {error && <Alert variant="danger">{'There is an error'}</Alert>}
+    </Container>
   );
 };
 

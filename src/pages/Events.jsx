@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { API_BASE_URL } from "./constants";
-import "./menu.css";
+import { Container, Alert } from "react-bootstrap";
 
-function Events() {
+import { API_BASE_URL } from "../constants";
+import { Loader } from "../components/loader/Loader";
+
+export const Events = () => {
   const [listOfEvents, setListOfEvents] = useState([]);
   const [fetching, setFetching] = useState(false);
   const [error, setError] = useState("");
 
-  const fetchAboutData = async () => {
+  const fetchEventsData = async () => {
     setFetching(true);
     try {
       const response = await fetch(`${API_BASE_URL}events`);
@@ -25,25 +27,19 @@ function Events() {
   };
 
   useEffect(() => {
-    fetchAboutData();
+    fetchEventsData();
   }, []);
 
   return (
-    <div>
+    <Container>
       {fetching ? (
-        <div className="spinner-border text-info" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
+        <Loader />
       ) : (
-        listOfEvents
+        listOfEvents // temporary
       )}
-      {error && (
-        <div className="alert alert-danger" role="alert">
-          {error.message}
-        </div>
-      )}
-    </div>
+      {error && <Alert variant="danger">{error.message}</Alert>}
+    </Container>
   );
-}
+};
 
 export default Events;
