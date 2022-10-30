@@ -35,7 +35,7 @@ export const Events = () => {
       {fetching ? (
         <Loader />
       ) : (
-        listOfEvents // temporary
+        JSON.stringify(listOfEvents) // temporary
       )}
       {error && <Alert variant="danger">{error.message}</Alert>}
     </Container>
