@@ -33,7 +33,7 @@ export const About = () => {
       ) : (
         about.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
       )}
-      {error && <Alert variant="danger">{'There is an error'}</Alert>}
+      {error && <Alert variant="danger">There is an error</Alert>}
     </Container>
   );
 };
