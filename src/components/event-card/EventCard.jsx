@@ -1,4 +1,6 @@
+import ShowMoreText from "react-show-more-text";
 import Card from "react-bootstrap/Card";
+
 import logo from "../../assets/pyladies-fb.jpeg";
 import { formatDate } from "../../utils";
 
@@ -11,7 +13,9 @@ export const EventCard = ({ title, startDate, description }) => {
         <Card.Subtitle className="mb-2 mt-2 text-muted">
           {formatDate(startDate)}
         </Card.Subtitle>
-        <Card.Text>{description}</Card.Text>
+        <Card.Text>
+          <ShowMoreText> {description}</ShowMoreText>
+        </Card.Text>
       </Card.Body>
     </Card>
   );
