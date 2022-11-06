@@ -3,10 +3,9 @@ import { Container, Alert } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-
 import { API_BASE_URL } from "../constants";
 import { Loader } from "../components/loader/Loader";
-import { EventCard } from "../components/event-card"
+import { EventCard } from "../components/event-card";
 import { sortArrayByDate } from "../utils";
 
 export const Events = () => {

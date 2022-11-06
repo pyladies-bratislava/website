@@ -6,12 +6,12 @@ export const sortArrayByDate = (array) => {
 };
 
 export const formatDate = (date) => {
-    return new Date(date).toLocaleString("en-GB", {
-        timeZone: 'CET',
-        day: "numeric",
-        month: "short",
-        year: "numeric",
-        hour: "numeric",
-        minute: "2-digit",
-      })
-}
+  return new Date(date).toLocaleString("en-GB", {
+    timeZone: "CET",
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  });
+};
