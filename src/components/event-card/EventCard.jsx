@@ -6,7 +6,7 @@ import { formatDate } from "../../utils";
 
 export const EventCard = ({ title, startDate, description }) => {
   return (
-    <Card style={{ width: "20rem" }}>
+    <Card>
       <Card.Img variant="top" src={logo} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
