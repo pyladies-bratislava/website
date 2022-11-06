@@ -14,6 +14,7 @@ export const Events = () => {
   const [error, setError] = useState("");
 
   const isNoData = !fetching && listOfEvents.length === 0;
+
   const fetchEventsData = async () => {
     setFetching(true);
     try {
