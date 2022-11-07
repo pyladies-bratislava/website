@@ -6,7 +6,7 @@ import { SOCIAL_MEDIA_CONFIG } from "../constants/index";
 export const Contact = () => {
   return (
     <>
-      <Container className="container">
+      <Container>
         <Image
           src="/assets/jumbotron.jpeg"
           fluid

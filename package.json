@@ -13,11 +13,12 @@
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^5.0.1",
+    "react-show-more-text": "^1.6.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "ESLINT_NO_DEV_ERRORS='true' react-scripts start",
+    "build": "DISABLE_ESLINT_PLUGIN='true' react-scripts build",
     "test": "react-scripts test",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
     "lint:fix": "eslint \"src/**/*.{js,jsx}\" --fix",
